@@ -1,12 +1,20 @@
 # EEG-WaveletDecompsiton
-This project focuses on classifying EEG signals using wavelet feature extraction followed by machine learning classifiers such as SVM, Random Forest, and Gradient Boosting. The EEG signals are processed using 3-level discrete wavelet decomposition, and statistical features are extracted from subbands to build accurate classification models.
-## Project Highlights
-- EEG signal preprocessing and denoising
-- 3-level **Wavelet Decomposition with Different Wavelets**
-- Feature extraction from wavelet coefficients
-- **StandardScaler**, **PCA**, and **SelectKBest** for dimensionality reduction
-- Trained multiple classifiers: SVM, Random Forest, Gradient Boosting and others
-- Evaluated with accuracy, classification report, and confusion matrix
+This project aims to **classify EEG signals** as either **depressed (MEC)** or **healthy (HEC)** by leveraging **discrete wavelet transform (DWT)** for feature extraction and multiple **machine learning models** for classification.
+
+## Project Workflow
+1. **Load EEG data** using `MNE` from `.edf` files
+2. **Denoise EEG signals** via wavelet thresholding
+3. Perform **2-level or 5-level wavelet decomposition** (depending on wavelet)
+4. Extract subbands: Delta, Theta, Alpha, Beta, Gamma
+5. Compute **statistical + nonlinear features**:
+ - Mean, Std, Median, IQR, Skewness, Kurtosis, Coefficient of Variation, Energy
+ - Approximate Entropy (ApEn), Sample Entropy (SampEn)
+6. Perform **ANOVA-based feature selection**
+7. Train **10 ML classifiers**:
+ - Random Forest, SVM, KNN, XGBoost, LightGBM, Naive Bayes, Decision Tree, Logistic Regression, MLP, Extra Trees
+8. **Evaluate and compare** model performance using accuracy scores
+9. **Visualize** accuracy table and trends across wavelets
+   
 ## Tech Stack
 - Python
 - NumPy, OpenCV, PyWavelets
