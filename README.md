@@ -16,6 +16,8 @@ This project aims to **classify EEG signals** as either **depressed (MEC)** or *
 9. **Visualize** accuracy table and trends across wavelets
    
 ## Tech Stack
-- Python
-- NumPy, OpenCV, PyWavelets
-- Scikit-learn, Matplotlib, Seaborn
+- Python, NumPy, Pandas, Matplotlib, Seaborn
+- MNE for EEG signal loading
+- PyWavelets (`pywt`) for wavelet transformation
+- Antropy for entropy features
+- Scikit-learn, XGBoost, LightGBM
