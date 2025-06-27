@@ -1,4 +1,4 @@
-# EEG-WaveletDecompsiton
+# EEG-WaveletDecomposition
 This project aims to **classify EEG signals** as either **depressed (MEC)** or **healthy (HEC)** by leveraging **discrete wavelet transform (DWT)** for feature extraction and multiple **machine learning models** for classification.
 
 ## Project Workflow
